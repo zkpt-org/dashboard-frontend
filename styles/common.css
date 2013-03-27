@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, p, blockquote, button{
+margin:0;
+padding:0;
+line-height: normal;
+outline:none;
+}
+
+body{font-size:11px;}
+
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, th {
+font-size:1em;
+font-style:normal;
+font-weight:normal;
+outline:none;
+}
+
+a, button, select { outline:none;text-decoration:none;}
+a:focus, button:focus, img:focus, select:focus { outline:none;text-decoration:none; }
+a:active, button:active, img:active, select:active { outline:none;text-decoration:none; }
+a:hover{text-decoration: none;}
+
+img { outline:none;text-decoration:none;border:0px;border-style:none;}
+
+button::-moz-focus-inner { border: 0; }
+select::-moz-focus-inner { border: 0; }
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus{
+    outline: none;-webkit-focus-ring-color:  rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
+
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+
+@font-face{ 
+    font-family: 'WebFont'; 
+    src: url('Webfont/webfont.eot'); 
+    src: url('Webfont/webfont.eot?#iefix') format('embedded-opentype'), 
+    url('Webfont/webfont.woff') format('woff'), 
+    url('Webfont/webfont.ttf') format('truetype'), 
+    url('Webfont/webfont.svg#webfont') format('svg');
+}
+
+.webfont{
+    font-family: "Webfont";
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* ~~~~~~~~~ common ~~~~~~~~~~ */
+
+body, select, input, textarea {
+	font-family: helvetica, verdana, sans-serif;
+	color: #333;
+	font-size: small;
+}
+body {
+    position:absolute;
+    top:0;
+    bottom:0;
+    min-height:100%;
+    width: 100%;
+    /* background-image: url('../images/back.png'); */
+}
+
+h1 {
+	font-weight: normal;
+	font-family: Helvetica, sans-serif;
+	font-size: xx-large;
+}
+h2 {
+	font-weight: normal;
+	font-family: Helvetica, sans-serif;
+	font-size: x-large;
+}
+h3{
+    font-weight: normal;
+	font-family: Helvetica, sans-serif;
+	font-size: large;
+}
+h4{
+    font-weight: normal;
+	font-family: Helvetica, sans-serif;
+	font-size: medium;
+}
+
+.corner-3{border-radius: 3px;}
+.corner-5{border-radius: 5px;}
+
+#container p{
+    padding:10px;
+}
+
+nav li.selected{
+    z-index: 1;
+    position: relative;
+    font-weight: bold;
+    text-shadow: 1px -2px #3572a0;    
+}
