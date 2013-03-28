@@ -41,8 +41,9 @@ The dropdowns are currently purely presenatational. The dropdown need to be wire
 Data needs to be fed into each of the dials. Currently, it is randomly assigning values. You can alter the behavior in glance.js, the updateReadings() function.
 
 ### Line Graph & Key
-The clicking on the key should alter the line graph t show or hide a particular data feed (currently unimplemented).
-I may do further work on the graph as we have found a [ better example to adapt ](http://bl.ocks.org/bobmonteverde/2070123) 
+The graph is loading its data from glance.tsv. This should be connected to your data layer.
+The clicking on the key should alter the line graph to show or hide a particular data feed (currently unimplemented).
+I may do further work on the graph as we have found a [ better example to adapt ](http://bl.ocks.org/bobmonteverde/2070123). So best to work on this when that portion is redone. 
 
 
 ### Events
