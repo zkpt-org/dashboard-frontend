@@ -11,9 +11,9 @@
 	<script type="text/javascript" src="../js/d3.v3.min.js"></script>
 	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="../styles/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/shared.js"></script>
 	
 	<script type="text/javascript" src="../js/gauge-white.js"></script>
-	<script type="text/javascript" src="../js/shared.js"></script>
 	<script type="text/javascript" src="../js/glance.js"></script>
 		
 	<link type="text/css" rel="stylesheet" href="../styles/bootstrap/css/bootstrap.min.css"/>

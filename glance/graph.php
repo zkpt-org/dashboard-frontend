@@ -1,6 +1,13 @@
 <div id="graph">
-    <h3>User Engagement Over Timeline</h3>
-    <? include('graph_js.php'); ?>
+    <div class="show-hide-toggle">
+        <a href="javascript:;" onclick="fold('#graph');">
+        <i class=icon-caret-down></i></a>
+        <hr/>
+    </div>
+    <div class="hide" style="display:block;">
+        <h3>User Engagement Over Timeline</h3>
+        <? include('graph_js.php'); ?>
+    </div>
     <div id="events">
         <h4 id="events-label">Events Over Timeline</h4>
         <table>
@@ -34,28 +41,28 @@
     <div id="graph-key">
         <ul>
             <li title="Used on 5 or more days">
-                <a href="javascript:;" onclick="ToggleGraph(this);">
+                <a href="javascript:;" onclick="ToggleGraph(this, 'Pedometer');">
                     <div class="key-circle pedometer"></div>Pedometer<i class="icon-ok"></i>
                 </a>
             </li>            
             <li  title="Logged in on 4 or more days">
-                <a href="javascript:;" onclick="ToggleGraph(this);">
+                <a href="javascript:;" onclick="ToggleGraph(this, 'Logins');">
                     <div class="key-circle login"></div>Logins<i class="icon-ok"></i>
                 </a>
             </li>
             
             <li title="Answered 3 or more coach questions">
-                <a href="javascript:;" onclick="ToggleGraph(this);"> 
+                <a href="javascript:;" onclick="ToggleGraph(this, 'Questions');"> 
                     <div class="key-circle question"></div>Questions<i class="icon-ok"></i>
                 </a>
             </li>
             <li title="Users who reported on self tracker">
-                <a href="javascript:;" onclick="ToggleGraph(this);">
+                <a href="javascript:;" onclick="ToggleGraph(this, 'Self-Trackers');">
                     <div class="key-circle tracker"></div>Self Trackers<i class="icon-ok"></i>
                 </a>
             </li>
             <li title="Logged in over the weekend">
-                <a href="javascript:;" onclick="ToggleGraph(this);">
+                <a href="javascript:;" onclick="ToggleGraph(this, 'Weekend-Logins');">
                     <div class="key-circle weekend"></div>Weekend Logins<i class="icon-ok"></i>
                 </a>
             </li>

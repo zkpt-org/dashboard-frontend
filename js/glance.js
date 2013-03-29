@@ -74,17 +74,21 @@ function ToggleAlertsBox(){
     }
 }
 
-function ToggleGraph(elem){
+function ToggleGraph(elem,line){
     if(!$(elem).hasClass("disabled")){
         $(elem).addClass("disabled");
         $(elem).find("i").removeClass("icon-ok");
         $(elem).find("i").addClass("icon-remove");
+        $('.line-'+line).fadeOut(500);
     }
     else{
         $(elem).removeClass("disabled");
         $(elem).find("i").removeClass("icon-remove");
         $(elem).find("i").addClass("icon-ok");
+        $('.line-'+line).fadeIn(500);
     }
 }
 
-
+function ToggleEvent(label, id){
+    
+}

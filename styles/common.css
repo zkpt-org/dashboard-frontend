@@ -104,3 +104,32 @@ nav li.selected{
     font-weight: bold;
     text-shadow: 1px -2px #3572a0;    
 }
+.show-hide-toggle{
+    margin:0;
+} 
+
+.show-hide-toggle a{
+    font-size: small;  
+    color:#ccc;
+}
+
+.show-hide-toggle i{
+    display: inline-block;
+    vertical-align: middle;
+    font-size:22px;
+    /* margin-right: 5px; */
+    width:15px;
+    /* color:#888; */
+}
+.show-hide-toggle hr{
+    width:735px;
+    display: inline-block;
+    vertical-align: middle;
+    border:none;
+    border-top:1px solid #ddd;
+    margin-left: 5px;
+}
+
+.hide{
+    margin-bottom: 20px;
+}

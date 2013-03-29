@@ -24,7 +24,7 @@ var line = d3.svg.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.engagement); });
 
-var svg = d3.select("#graph").append("svg")
+var svg = d3.select("#graph .hide").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .attr("id", "glance-graph")
@@ -86,15 +86,41 @@ d3.tsv("../data/glance.tsv", function(error, data) {
       .attr("class", "user");
 
   user.append("path")
-      .attr("class", "line")
       .attr("d", function(d) { return line(d.values); })
-      .style("stroke", function(d) {return color(d.name); });
+      .style("stroke", function(d) {return color(d.name); })
+      .attr("class",function(d) { return "line line-" + d.name.replace(" ","-"); });
 
   user.append("circle")
       .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
       .attr("transform", function(d) {return "translate(" + x(d.value.date) + "," + y(d.value.engagement) + ")"; })
       .attr("r", 3)
-      .attr("fill",function(d) { return color(d.name); });
+      .attr("fill",function(d) { return color(d.name); })
+      .attr("class",function(d) { return "line-" + d.name.replace(" ","-"); });
+  
+  d3.csv("../data/Events.csv", function(data){
+      
+      data.forEach(function(e) {
+        
+        user.append("circle")
+          .datum(function(d){ return { name: d.name, value: d.values[check(d,e.EventWeek1)] }; })
+          .attr("transform", function(d) { return "translate(" + x(e.EventWeek1) + "," + y(d.value.engagement) + ")"; })
+          .attr("r", 3.5)
+          .attr("stroke",function(e) { return color(e.name); })
+          .attr("fill",function(e) { return "#FFFFFF"; })
+          .attr("class",function(d) { return "line-" + d.name.replace(" ","-"); });
+      });
+  });
 
 });
+
+
+function check(arr, val){
+    var retVal = false;
+    $.each(arr, function(k,v){
+        $.each(arr["values"], function(i, v2){
+            if (val == v2.date) retVal = i;
+        });
+    });
+    return retVal;
+}
 </script>
