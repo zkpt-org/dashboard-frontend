@@ -1,4 +1,7 @@
 /* Javascript used by the "At a Glance" page */
+var hidden = [];
+var _COLORS_ = ['#3ea4bf','#F6BB33', '#49bf92', '#a084bf', '#FF6A13'];
+var colors   = ['#3ea4bf','#F6BB33', '#49bf92', '#a084bf', '#FF6A13'];
 
 function onDocumentReady() {
     var gauges = {}
@@ -11,10 +14,10 @@ function onDocumentReady() {
     		maxValue: 100,
     		transitionMs: 4000,
     	});
-    	gauges["g" + String(i)].render();        
+    	gauges["g" + String(i)].render();
+    	      
     } 	
-	
-	
+		
 	function updateReadings() {    		
 		for( var n=0; n<5; n++ ){ 
     		var value = Math.round((Math.random() * 100)*100)/100;
@@ -41,24 +44,28 @@ function onDocumentReady() {
 	}
 	       	
 	updateReadings();
+    draw();
     
-    /** 
-     * If the first child in the alert box is a real alert, then display alert. 
+    /* 
+     *  If the first child in the alert box is a real alert, then display alert. 
      */
     if($("#alerts-box").children().length > 0 && $("#alerts-box .alert").first().attr("id")!="no-alerts"){
         ToggleAlertsBox();
         $('#alerts-label').addClass("active-alerts");
     }
-
 }
 
-if ( !window.isLoaded ) {
+if( !window.isLoaded ) {
 	window.addEventListener("load", function() {
 		onDocumentReady();
 	}, false);
-} else {
+}
+else{
 	onDocumentReady();
 }
+
+
+/*~~~~~~ Functions ~~~~~~*/
 
 function ToggleAlertsBox(){
     if($("#alerts-box").css("display") == "none"){
@@ -74,18 +81,32 @@ function ToggleAlertsBox(){
     }
 }
 
-function ToggleGraph(elem,line){
+function ToggleGraph(elem, line, index){
     if(!$(elem).hasClass("disabled")){
         $(elem).addClass("disabled");
         $(elem).find("i").removeClass("icon-ok");
         $(elem).find("i").addClass("icon-remove");
-        $('.line-'+line).fadeOut(500);
+        
+        if($.inArray(line, hidden)==-1)
+            hidden.push(line);
+        
+        $('.line-'+line).fadeOut(500, function(){
+            //$('#glance-graph ').remove();
+            //$('.line-'+line).remove();
+            //draw(hidden, index, colors, false);
+        });
+        $('#glance-graph').remove();
+        draw(hidden, index, false);
+       
     }
     else{
         $(elem).removeClass("disabled");
         $(elem).find("i").removeClass("icon-remove");
         $(elem).find("i").addClass("icon-ok");
-        $('.line-'+line).fadeIn(500);
+        $('.line-'+line).fadeIn(500, function(){});
+        hidden.splice(hidden.indexOf(line), 1);    
+        $('#glance-graph').remove();
+        draw(hidden, index, true);
     }
 }
 

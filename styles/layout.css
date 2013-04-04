@@ -19,13 +19,18 @@ header{
 
 /* ~~~~~~~~~ footer ~~~~~~~~~~ */
 
+footer{
+    
+}
+
 /* ~~~~~~~~~ layout ~~~~~~~~~~ */
 
 #container{
     width:760px;
     min-height:100%;
     margin:0px auto 0px auto;
-    padding:20px;    
+    padding:20px;
+    padding-bottom: 80px;    
 }
 
 #logo-box{
@@ -116,4 +121,40 @@ nav .dropdown{
     padding:0px;
     margin:0px;
     height:30px;
+}
+
+.pointer-box .pointer{
+    border:1px solid #ddd;
+    border-radius: 3px;
+    width:30px;
+    height:30px;
+    top:10px;
+    left:50px;
+    position: absolute;
+    background-color:#fff;
+    z-index: 2;
+    
+/*
+    transform: skew(20deg,30deg);
+    -ms-transform: skew(30deg,20deg);
+    -webkit-transform: skew(30deg,20deg);
+    -o-transform: skew(30deg,20deg);
+    -moz-transform: skew(25deg,25deg);
+*/
+    
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    
+}
+
+.pointer-box{
+    width:auto;
+    height:25px;
+    overflow-y: hidden;
+    position: relative;
+    top:-25px;
+          
 }

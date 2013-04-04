@@ -1,0 +1,168 @@
+{"items":[
+{
+"title":"Segment 1",
+"url":"",
+"score":"500 points",
+"time":"5 hours",
+"id":"5056279",
+"description":"Program A, Male, Age 35-50"
+},
+{
+"title":"Segment 2",
+"url":"",
+"score":"400 points",
+"time":"15 hours",
+"id":"5056279",
+"description":"Male, Age 50-65, Diabetic"
+},
+{
+"title":"Segment 3",
+"url":"",
+"score":"30 points",
+"time":"25 hours",
+"id":"5056279",
+"description":"Program C, Age 35-50, Diabetic "
+},
+{
+"title":"Segment 4",
+"url":"",
+"score":"100 points",
+"time":"35 hours",
+"id":"5056279",
+"description":"Male, Age 35-50, High Blood Pressure"
+},
+{
+"title":"Segment 5",
+"url":"",
+"score":"900 points",
+"time":"45 hours",
+"id":"5056279",
+"description":"Female, Age 50-65, Diabetic"
+},
+{
+"title":"Segment 6",
+"url":"",
+"score":"30 points",
+"time":"55 hours",
+"id":"5056279",
+"description":"Program C, Female, Age 35-50"
+},
+{
+"title":"Segment 7",
+"url":"",
+"score":"20 points",
+"time":"65 hours",
+"id":"5056279",
+"description":"Female, Age 50-65, Diabetic"
+},
+{
+"title":"Segment 8",
+"url":"",
+"score":"50 points",
+"time":"75 hours",
+"id":"5056279",
+"description":"Program A, Female, Age 50-65"
+},
+{
+"title":"Segment 9",
+"url":"",
+"score":"75 points",
+"time":"85 hours",
+"id":"5056279",
+"description":"Male, Age 35-50, Diabetic"
+},
+{
+"title":"Segment 10",
+"url":"",
+"score":"120 points",
+"time":"95 hours",
+"id":"5056279",
+"description":"Program B, Male, Age 35-50"
+},
+
+
+
+
+
+{
+"title":"Segment 11",
+"url":"",
+"score":"500 points",
+"time":"50 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 12",
+"url":"",
+"score":"400 points",
+"time":"150 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 13",
+"url":"",
+"score":"30 points",
+"time":"250 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 14",
+"url":"",
+"score":"100 points",
+"time":"50 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 15",
+"url":"",
+"score":"900 points",
+"time":"450 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 16",
+"url":"",
+"score":"30 points",
+"time":"550 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 17",
+"url":"",
+"score":"20 points",
+"time":"50 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 18",
+"url":"",
+"score":"50 points",
+"time":"750 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 19",
+"url":"",
+"score":"75 points",
+"time":"80 hours",
+"id":"5056279",
+"description":""
+},
+{
+"title":"Segment 20",
+"url":"",
+"score":"120 points",
+"time":"950 hours",
+"id":"5056279",
+"description":""
+}
+
+]}

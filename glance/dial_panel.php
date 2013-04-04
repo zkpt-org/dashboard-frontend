@@ -5,6 +5,7 @@
         <hr/>
     </div>
     <div class="hide" style="display:block;">
+        <!-- <h3>User Engagement Today</h3> -->
         <div id="big-dial">Pedometer</div>
         <table>
             <tr>

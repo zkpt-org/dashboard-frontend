@@ -281,37 +281,8 @@
 	border:1px solid #ddd;
 }
 
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #aaa;
-    stroke-width:1px;
-    shape-rendering: crispEdges;
-}
-text{
-	fill:#aaa;
-	font-size: 10px;
-	font-family:Helvetica, sans-serif;	
-}
-
-.x.axis path{}
-
-.line {
-  fill: none;
-  stroke:#3399cc;
-  stroke-width: 2.5px;
-}
-
-.text{
-	fill:#999;
-	font-size: 10px;
-	font-family:Helvetica, sans-serif;
-}
-
 #graph{
     margin-top:10px;
-    margin-bottom:80px;
 }
 
 #graph h3{
@@ -376,7 +347,7 @@ text{
     padding:20px;
 }
 #events table{
-    width:510px
+    width:510px;
 }
 #events tr{
     border-top: 1px solid #eee;

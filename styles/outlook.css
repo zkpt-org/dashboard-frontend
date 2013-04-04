@@ -1,0 +1,187 @@
+svg{
+    font: 10px sans-serif;
+	opacity:0;
+}
+
+h3 {
+    color: #AAAAAA;
+}
+#snapshot .right{
+    display:inline-block;
+}
+#snapshot article{
+    width:300px;
+    min-height: 150px;
+    vertical-align: top;
+}
+
+#snapshot{}
+
+#download{
+    margin-left:15px;
+    margin-top:15px;
+}
+#download i{
+    font-size:40px;
+    color:#64b3c1;
+}
+#download:hover i, #download:hover .label{
+    color:#72cede;
+    transition: color 1s;
+    -moz-transition: color 1s;
+    -webkit-transition: color 1s;
+    -o-transition: color 1s;  
+}
+
+#download .label{
+    background:none;
+    color:#64b3c1;
+    text-shadow: none;
+    vertical-align:middle;
+    margin-top: -20px;
+    margin-left:5px;
+}
+
+
+#traffic-1, #traffic-2, #traffic-3{
+    width:0px;
+    height:0px;
+    border-radius: 50%;
+    display: inline-block;
+
+    opacity:0;
+    color:#fff;
+    font-size: large;
+    font-weight: bold;
+    
+    text-align: center;
+    vertical-align: middle;
+}
+
+#traffic-lights table{
+    width:450px;
+    height:150px;
+    position:relative;
+    margin:20px 0px 20px -20px;
+    display: inline-table;
+    vertical-align: top;
+}
+
+#traffic-lights table td{
+    font-size: medium;
+    padding:0px;
+    margin: 0px;
+    text-align: center;
+    width:150px;
+    height:25px;
+    color:#999;
+}
+
+#traffic-lights table #diff_leavers, 
+#traffic-lights table #diff_fencers, 
+#traffic-lights table #diff_stayers{
+    font-size: x-large;
+    color:#888;
+}
+
+#traffic-lights table td.traffic{
+    width:150px;
+    height:150px;
+}
+
+#traffic-lights table div h4{
+    text-align: center;
+    vertical-align: middle;
+    color:#fff;
+    font-size: 16px;
+    font-weight: bold;
+    position:relative;
+    top:38%;    
+}
+
+
+
+#bubble{
+    width:760px;
+}
+
+#bubble h3 {
+    color: #aaa;
+}
+
+#bubble .top {
+    text-align: left;
+    line-height: 18pt;
+}
+
+#bubble .top a {
+    color: #aaa;
+}
+
+#bubble .top a:visited {
+    color: #aaa;
+}
+
+#bubble h3 > small {
+    margin: 0 0 0 26px;
+    font-size: 10pt;
+    font-weight: 400;
+}
+.popover {
+    z-index: 9000;
+}
+
+.tooltip {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    border: 1px solid #e0e0e0;
+    background-color: #fefefe;
+    opacity: 0.95;
+    color: #777;
+    padding: 2px 10px 10px 10px;
+    width: 100px;
+    font-size: 7pt;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.20);
+}
+
+.tooltip .title a {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #777;
+    line-height:2;
+}
+
+
+#bubble svg {
+      min-width: 500px;
+      min-height: 400px;
+}
+#summary{
+    margin-top:30px;
+}
+#summary table{
+    margin:0px 20px 20px 20px;
+    width:720px;
+}
+#summary table td{
+    padding:5px;
+}
+#summary table .narrow{
+    width:80px;
+}
+
+#summary th{
+    font-size: large;
+    text-align: left;
+    width:50%;
+}
+
+#summary .circle.red{
+    border:1px solid #b3361a;
+}
+#summary .circle.green{
+    border:1px solid #03a956;
+}

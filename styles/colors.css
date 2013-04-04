@@ -9,6 +9,12 @@ a:active{color:#336699;}
 
 h1, h2, h3, h4{color:#888;}
 
+.red{background-color:#ff3d12;}
+.orange{background-color:#FF6A13;}
+.green{background-color:#00CC66;}
+.yellow{background-color:#F6BB33;}
+
+
 header{
     background-color: #3ca3da;
     background-image: -moz-linear-gradient(top, #3ca3da 0%, #2688bc 100%);
@@ -28,15 +34,30 @@ footer{
     
 }
 
+article{
+    color:#999;
+    border:1px solid #ddd;
+    border-radius:3px;
+}
+
+p{
+    
+}
+
 #main{
     background-color: #eee;
 }
 
 #container{
     background-color: #eee;
-    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
-    background: -moz-linear-gradient(top,  #eee,  #fff);
-    
+    background: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%);
+    background: -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%);
+    background: linear-gradient(to bottom, #eeeeee 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+
     border-left: 1px solid #ddd;
     border-right: 1px solid #ccc;
 }

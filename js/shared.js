@@ -9,3 +9,16 @@ function fold(e){
     $(e+' .show-hide-toggle :node[1]').text(txt);
 */ 
 }
+
+/*
+Array.prototype.insert = function(index, item){
+  this.splice(index, 0, item);
+};
+*/
+
+// Remove the element at the given index
+/*
+Array.prototype.remove = function(index) {
+	this.splice(index, 1);
+}
+*/
