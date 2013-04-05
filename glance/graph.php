@@ -5,8 +5,7 @@
         <hr/>
     </div>
     <div class="hide">
-        <h3>User Engagement Over Timeline</h3>
-        <? include('graph_js.php'); ?>    
+        <h3>User Engagement Over Timeline</h3>   
     <div id="events">
         <h4 id="events-label">Events Over Timeline</h4>
         <table>

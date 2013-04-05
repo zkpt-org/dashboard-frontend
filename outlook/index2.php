@@ -29,7 +29,7 @@
 <body>
     <header>
         <div id="logo-box">
-            <div id=logo><img src="../images/logo-blue.png"/></div>
+        <div id=logo>your logo here</div>
         </div>
         <? include('../shared/nav.php'); ?>
     </header>
@@ -50,39 +50,45 @@
                             <td>Leavers</td>
                             <td>On the Fence</td>
                             <td>Stayers</td>
+                                                        <td>
+                            <div id=download>
+                            <a href="../downloads/risk_scores.xls" target="_blank">
+                                <i class="icon-cloud-download"></i>
+                                <span class="label">Download Risk Scores</span>
+                            </a>
+                            </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="traffic"><div id="traffic-1" class="red"><h4></h4></div></td>
                             <td class="traffic"><div id="traffic-2" class="yellow"><h4></h4></div></td>
                             <td class="traffic"><div id="traffic-3" class="green"><h4></h4></div></td>
+                            <td>
+                            <article>
+                            <p>
+                            lorem ipsum
+                            </p>
+                            </article>
+                            </td>
+
                         </tr>
                         <tr>
                             <td id="diff_leavers"></td>
                             <td id="diff_fencers"></td>
                             <td id="diff_stayers"></td>
+                            <td>
+                            <article>
+                            <p>
+                            lorem ipsum
+                            </p>
+                            </article>
+                            </td>
+
                         </tr>
+
                     </table>
                     
-                    <div class=right>
-                        <div id=download>
-                            <a href="../downloads/risk_scores.xls" target="_blank">
-                                <i class="icon-cloud-download"></i>
-                                <span class="label">Download Risk Scores</span>
-                            </a>
-                        </div>
-                        <article>
-                            <div class="pointer-box-left"><div class="pointer small"></div></div>
-                            <p>
-                                Size of user base in risk categories
-                            </p>
-                        </article>
-                        <article>
-                            <div class="pointer-box-left"><div class="pointer small"></div></div>
-                            <p>
-                                Change in size since the previous week
-                            </p>
-                        </article>
-                    </div>
+
                 </div>
             </div>            
         </div>
@@ -99,7 +105,7 @@
             </div>
         </div>
 
-        <div id="bubble" class="bubble-chart">
+        <div id="bubble">
         <div class="show-hide-toggle">
                 <a href="javascript:;" onclick="fold('#bubble');">
                 <i class=icon-caret-down></i></a>
@@ -108,7 +114,7 @@
         <div class="hide">
             <div class="top">
               <h3>
-                  <a href="#all" class="category" value="all">Risk Assessment Segmentation</a>
+                  <a href="" class="category" value="all">Risk Assessment Segmentation</a>
 <!--
                   <a href="" class="category" value="large">Largest</a> |
                   <a href="" class="category" value="red">Riskiest</a> |
@@ -117,7 +123,7 @@
               </h3>
             </div>
 
-            <div class="box summary" id=summary>
+            <div class="box" id=summary>
                 <div class=pointer-box><div class=pointer></div></div>
                 
                 <table>

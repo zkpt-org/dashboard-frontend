@@ -13,7 +13,9 @@ function onDocumentReady() {
           $(".hide svg").animate({
               opacity:1.0
           },2000 );
-                    
+          
+          //risk.init( window.location.href.split("#")[1] ? window.location.href.split("#")[1] : "news");          
+          
           $("#traffic-1").animate({
               opacity: 1.0,
               width:50+leavers,
@@ -22,7 +24,7 @@ function onDocumentReady() {
               }, 800, function(){
                   $("#traffic-1 h4").text(leavers.toFixed(1)+"%");
                   $("#diff_leavers").text(function(){return diff_leavers>0 ? "+"+diff_leavers.toFixed(1)+"%":diff_leavers.toFixed(1)+"%";});
-                  
+                  $("#snapshot article").fadeIn(1600);
                   $("#traffic-2").animate({
                       opacity: 1.0,
                       easing: 'easeOutBounce',

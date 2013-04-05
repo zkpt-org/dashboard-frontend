@@ -15,6 +15,8 @@
 header{    
     height:35px;
     padding:5px 10px 0px 10px;
+    z-index: 1;
+    top:0;
 }
 
 /* ~~~~~~~~~ footer ~~~~~~~~~~ */
@@ -30,22 +32,27 @@ footer{
     min-height:100%;
     margin:0px auto 0px auto;
     padding:20px;
-    padding-bottom: 80px;    
+    padding-bottom: 80px;
+    z-index: 1;    
 }
 
 #logo-box{
     position: absolute;
     display:table;
+    /* code below is for the logo if it is not to be placed in the header */
+    top:45px;
+    z-index:-1;
 }
 
-#logo{    
-    height:30px;
+#logo{
+    /* height:30px; */
     display: table-cell;
     vertical-align: middle;
 }
 
 #logo img{
     width:125px;
+    height:22px;
     vertical-align:middle;
     z-index: 0;
     margin-left:5px;
@@ -157,4 +164,40 @@ nav .dropdown{
     position: relative;
     top:-25px;
           
+}
+
+.pointer-box-left{
+    width:25px;
+    height:50px;
+    overflow-x: hidden;
+    position: absolute;
+    left:-25px;
+    vertical-align: middle;
+    z-index: 2;
+}
+
+.pointer-box-left .pointer{
+    border:1px solid #ddd;
+    border-radius: 3px;
+    width:30px;
+    height:30px;
+    top:10px;
+    left:10px;
+    position: absolute;
+    background-color:#fff;
+    z-index: 2;
+    
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);    
+}
+.pointer-box-left .pointer.medium{
+    left:15px;   
+}
+
+.pointer-box-left .pointer.small{
+    left:20px;
+    border-radius: 2px;
 }

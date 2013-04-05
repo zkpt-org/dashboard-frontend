@@ -28,7 +28,7 @@
 <body>
     <header>
         <div id="logo-box">
-        <div id=logo>your logo here</div>
+        <div id=logo><img src="../images/logo-blue.png"/></div>
         </div>
         <? include('../shared/nav.php'); ?>
     </header>

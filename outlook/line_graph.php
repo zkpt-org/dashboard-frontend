@@ -58,11 +58,15 @@ d3.tsv("../data/defscore_percent.tsv", function(error, data) {
 	d3.min(weeks),d3.max(weeks)
 	//d3.extent(data, function(d) { return d.Week; })
   ]);
-
+  
+  xAxis.ticks(d3.max(weeks)/2);
+  
   y.domain([
     d3.min(users, function(c) { return d3.min(c.values, function(v) { return v.engagement; }); })*0.9,
     d3.max(users, function(c) { return d3.max(c.values, function(v) { return v.engagement; }); })*1.1
   ]);
+
+  yAxis.ticks(d3.max(users, function(c) { return d3.max(c.values, function(v) { return v.engagement; }); })/5);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -98,7 +102,7 @@ d3.tsv("../data/defscore_percent.tsv", function(error, data) {
   user.append("circle")
       .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
       .attr("transform", function(d) {return "translate(" + x(d.value.date) + "," + y(d.value.engagement) + ")"; })
-      .attr("r", 100)
+      .attr("r", 3)
       .attr("fill",function(d) { return color(d.name); })
       .attr("class",function(d) { return "line-" + d.name.replace(" ","-"); });
 });

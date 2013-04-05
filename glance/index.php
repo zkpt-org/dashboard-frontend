@@ -29,7 +29,7 @@
 <body>
     <header>
         <div id="logo-box">
-        <div id=logo><img src="../images/logo.png"/></div>
+        <div id=logo><img src="../images/logo-blue.png"/></div>
         </div>
         <? include('../shared/nav.php'); ?>
     </header>
