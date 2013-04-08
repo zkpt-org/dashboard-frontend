@@ -160,11 +160,36 @@ nav .dropdown{
 .pointer-box{
     width:auto;
     height:25px;
-    overflow-y: hidden;
+    overflow: hidden;
     position: relative;
-    top:-25px;
-          
+    top:-25px;          
 }
+
+.pointer-box.down{
+    width: 25px;
+    height:20px;
+    overflow: hidden;
+    position: relative;
+    top:25px;
+}
+
+.pointer-box.down .pointer{
+    border:1px solid #ddd;
+    border-radius: 3px;
+
+    top:-30px;
+    left:-1px;
+    position: absolute;
+    background-color:#fff;
+    z-index: 2;
+    
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);   
+}
+
 
 .pointer-box-left{
     width:25px;
@@ -194,10 +219,25 @@ nav .dropdown{
     -moz-transform: rotate(45deg);    
 }
 .pointer-box-left .pointer.medium{
-    left:15px;   
+    left:15px;
 }
-
 .pointer-box-left .pointer.small{
     left:20px;
     border-radius: 2px;
+    width: 25px;
+}
+
+.pointer-box.down .pointer.small{
+    border-radius: 2px;
+}
+
+
+.tooltip-0 .pointer-box.down{
+       
+}
+.tooltip-0 .pointer-box.down .pointer.small{
+    border-radius: 1px;        
+}
+.tooltip-0 .pointer-box.down .pointer{
+    border:1px solid #999;    
 }

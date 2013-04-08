@@ -19,20 +19,40 @@
                 <td>4 week Challenge started for Program 1</td>
                 <td class="event-key">B</td>
             </tr>
-            <tr onclick="ToggleEvent('C', 103);">
-                <td class="date">8-11-2012</td>
-                <td>Division ABC of company WXY started signing up on Program 2</td>
-                <td class="event-key">C</td>
+            <tr onclick="ToggleEvent('C', 101);">
+            <td class="date">08-3-2012</td>
+            <td>10 week Challenge ended for Program 2</td>
+            <td class="event-key">C</td>
             </tr>
-            <tr onclick="ToggleEvent('D', 104);">
-                <td class="date">10-01-2012</td>
-                <td>8 week Challenge started for Program 3</td>
+            <tr onclick="ToggleEvent('D', 103);">
+                <td class="date">08-11-2012</td>
+                <td>Division ABC of company WXY started signing up on Program 2</td>
                 <td class="event-key">D</td>
             </tr>
-            <tr onclick="ToggleEvent('E', 105);">
+            <tr onclick="ToggleEvent('E', 102);">
+                <td class="date">08-31-2012</td>
+                <td>4 week Challenge ended for Program 1</td>
+                <td class="event-key">E</td>
+            </tr>
+            <tr onclick="ToggleEvent('F', 104);">
+                <td class="date">10-01-2012</td>
+                <td>8 week Challenge started for Program 3</td>
+                <td class="event-key">F</td>
+            </tr>
+            <tr onclick="ToggleEvent('G', 105);">
                 <td class="date">10-27-2012</td>
                 <td>10 week Challenge started for Program 4</td>
-                <td class="event-key">E</td>
+                <td class="event-key">G</td>
+            </tr>
+            <tr onclick="ToggleEvent('H', 104);">
+                <td class="date">11-26-2012</td>
+                <td>8 week Challenge started for Program 3</td>
+                <td class="event-key">H</td>
+            </tr>
+            <tr onclick="ToggleEvent('I', 105);"> 
+                <td class="date">01-5-2013</td>
+                <td>10 week Challenge ended for Program 4 </td>
+                <td class="event-key">I</td>
             </tr>
         </table>
     </div>

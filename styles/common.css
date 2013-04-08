@@ -54,6 +54,10 @@ table {border-collapse: collapse;border-spacing: 0;}
     font-weight: normal;
 }
 
+.bold{
+    font-weight:bold;
+}
+
 /* ~~~~~~~~~ common ~~~~~~~~~~ */
 
 body, select, input, textarea {
@@ -319,6 +323,31 @@ text{
     font-weight: bold;
     color: #777;
     line-height:2;
+}
+
+.tooltip-0{
+    position: absolute;
+    visibility:hidden;
+    display:table;
+    border: 1px solid #aaa;
+    background-color: #fefefe;
+    opacity: 0.95;
+    color: #777;
+    padding: 5px 10px;
+    min-width: 10px;
+    /* font-size: 11px; */
+    z-index: 10;
+    border-radius: 3px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+.tooltip-0 .tool-label{
+    /* display:table-cell; */
+    vertical-align: middle;
+    text-align: center;
+    height:0px;
+    margin-top:5px;  
 }
 
 .bubble-chart svg {

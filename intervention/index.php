@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="../styles/bootstrap/js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript" src="../js/shared.js"></script>
-	<script type="text/javascript" src="../js/intervention.js"></script>
+	<!-- <script type="text/javascript" src="../js/intervention.js"></script> -->
 		
 	<link type="text/css" rel="stylesheet" href="../styles/bootstrap/css/bootstrap.min.css"/>
 	<link type="text/css" rel="stylesheet" href="../styles/Font-Awesome/css/font-awesome.min.css">
@@ -22,7 +22,7 @@
 	<link type="text/css" rel="stylesheet" href="../styles/layout.css"/>
 	<link type="text/css" rel="stylesheet" href="../styles/colors.css"/>
 	
-	<link type="text/css" rel="stylesheet" href="../styles/intervention.css"/>
+	<!-- <link type="text/css" rel="stylesheet" href="../styles/intervention.css"/> -->
 </head>
 
 <body>
@@ -33,7 +33,12 @@
         <? include('../shared/nav.php'); ?>
     </header>
     <div id=container>
-    
+        <script>
+            function toggleimg(elem){
+                $(elem).attr("src")=='1.png' ? $(elem).attr("src", '2.png') : $(elem).attr("src", '1.png');
+            }
+        </script>
+        <img src="1.png" onclick="toggleimg(this);" />
     </div>
     <footer></footer>
 </body>

@@ -8,7 +8,9 @@ var margin = {top: 30, right: 30, bottom: 50, left: 40},
     width  = 760 - margin.left - margin.right,
     height = 400 - margin.top  - margin.bottom;
 
+var tooltip;
 
+var dial_values = [90.015,86.72,78,63.05,69.63166667].reverse();
 
 /*~~~~~ On Ready State ~~~~~~*/
 
@@ -29,7 +31,7 @@ function onDocumentReady() {
 		
 	function updateReadings() {    		
 		for( var n=0; n<5; n++ ){ 
-    		var value = Math.round((Math.random() * 100)*100)/100;
+    		var value = dial_values.pop();
     		gauges["g" + String(n)].update(value);
     		
     		$('#led-' + String(n)).removeClass('green orange yellow');
@@ -57,9 +59,36 @@ function onDocumentReady() {
         ToggleAlertsBox();
         $('#alerts-label').addClass("active-alerts");
     }
-    	       	
+    
+    tooltip = d3.select("#graph")
+	.append("div")
+	.attr("class", "tooltip-0");
+	tooltip.append("div")
+	.attr("class", "tool-label bold large")
+	.text("tooltip");
+	
+	/* (tooltip[0][0].clientWidth / 2) */
+	
+	tooltip.append("div").attr("class", "pointer-box down")
+	.style("left",  String( 
+	      ( $(".pointer.small").width()  - $(".tooltip-0").width()/2 + 8) /2 
+	   )  + "px")
+	.append("div")
+	.attr("class", "pointer small").style("left", "0px");
+
+
 	updateReadings();
     draw();
+    
+    $('body').click(function(){
+        $('.tooltip-0').animate({
+            opacity: 0
+            },500,function(){
+                $('.tooltip-0').css("opacity", "0.95");
+                $('.tooltip-0').css("visibility", "hidden");
+            });
+        });
+    
 }
 
 if( !window.isLoaded )
@@ -80,18 +109,10 @@ function draw(exclude, index, insert){
     
     var y = d3.scale.linear()
         .range([height, 0]);
+     
+    tooltip.style("visibility", "hidden");
         
-    if(index != null){    
-/*         console.log(exclude); */
-        
-        /* colors = (typeof colors === 'undefined') ?  _COLORS_.slice(0) : colors; */
-        
-        /* console.log(colors); */
-        /* console.log(_COLORS_); */
-        /* console.log(_COLORS_[index]); */
-        
-        console.log(colors.indexOf(_COLORS_[index]));
-        
+    if(index != null){        
         if(!insert)
             colors.splice(colors.indexOf(_COLORS_[index]), 1);
         else
@@ -146,20 +167,20 @@ function draw(exclude, index, insert){
           };
         });
     
-      x.domain([
-    	d3.min(weeks),d3.max(weeks)
-      ]);
-      
-      xAxis.ticks(d3.max(weeks)/2);
-      
-      y.domain([
-          d3.min(users, function(c) { return d3.min(c.values, function(v) { return v.engagement; }); })*0.90,
-          d3.max(users, function(c) { return d3.max(c.values, function(v) { return v.engagement; }); })*1.1
-      ]);
-      
-      yAxis.ticks(d3.max(users, function(c) { return d3.max(c.values, function(v) { return v.engagement; }); })/10);
-      
-      svg.append("g")
+        x.domain([
+            d3.min(weeks),d3.max(weeks)
+        ]);
+        
+        xAxis.ticks(d3.max(weeks)/2);
+        
+        y.domain([
+            d3.min(users, function(c) { return d3.min(c.values, function(v) { return v.engagement; }); })*0.90,
+            d3.max(users, function(c) { return d3.max(c.values, function(v) { return v.engagement; }); })*1.1
+        ]);
+        
+        yAxis.ticks(d3.max(users, function(c) { return d3.max(c.values, function(v) { return v.engagement; }); })/10);
+        
+        svg.append("g")
           .attr("class", "x axis")
           .attr("id", "x-axis")
           .attr("transform", "translate(0," + height + ")")
@@ -167,43 +188,43 @@ function draw(exclude, index, insert){
           .style("opacity", "0")
           .transition().duration(50).delay(0).ease('in')
           .style("opacity", "1");
-      
-      d3.select("#x-axis")
+        
+        d3.select("#x-axis")
           .append("text")
-    	  .attr("class", "text")
+          .attr("class", "text")
           .attr("y", 30)
-    	  .attr("x", 600)
+          .attr("x", 600)
           .attr("dy", ".71em")
           .text("Time period in weeks")
           .style("opacity", "0")
           .transition().duration(50).delay(0).ease('in')
           .style("opacity", "1");
-    
-      svg.append("g")
+        
+        svg.append("g")
           .attr("class", "y axis")
           .attr("id", "y-axis")
           .call(yAxis)
           .style("opacity", "0")
           .transition().duration(50).delay(0).ease('in')
           .style("opacity", "1");
-      
-      d3.select("y-axis")    
+        
+        d3.select("#y-axis")    
           .append("text")
-    	  .attr("class", "text")
-          .attr("y", -5)
-    	  .attr("x", 5)
+          .attr("class", "text")
+          .attr("y", 5)
+          .attr("x", 5)
           .attr("dy", ".71em")
           .text("Percentage of users")
           .style("opacity", "0")
           .transition().duration(50).delay(0).ease('in')
           .style("opacity", "1");
-    
-      var user = svg.selectAll(".user")
+        
+        var user = svg.selectAll(".user")
           .data(users)
           .enter().append("g")
           .attr("class", "user");
-    
-      user.append("path")
+        
+        user.append("path")
           .attr("d", function(d) { return d.values[0]; })
           .style("stroke", "#fff")
           .style("opacity", "0")
@@ -212,8 +233,8 @@ function draw(exclude, index, insert){
           .style("stroke", function(d) {return color(d.name); })
           .attr("d", function(d) { return line(d.values); })
           .attr("class",function(d) { return "line line-" + d.name.replace(/_/g,"-"); });
-    
-      user.append("circle")
+        
+        user.append("circle")
           .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
           .attr("transform", function(d) {return "translate(" + x(d.value.date) + "," + y(d.value.engagement) + ")"; })
           .style("opacity", "0")
@@ -222,24 +243,70 @@ function draw(exclude, index, insert){
           .attr("r", 3)
           .attr("fill",function(d) { return color(d.name); })
           .attr("class",function(d) { return "line-" + d.name.replace(/_/g,"-"); });
-      
-      d3.csv("../data/Events.csv", function(data){
-          
-          data.forEach(function(e) {
-            user.append("circle")              
-              .datum(function(d){ return { name: d.name, value: d.values[check(d,e.EventWeek1)] }; })
-              .attr("transform", function(d) { return "translate(" + x(e.EventWeek1) + "," + y(d.value.engagement) + ")"; })
-              .attr("r", 0)
-              .style("opacity", "0")
-              .transition().duration(600).delay(50).ease('elastic')
-              .style("opacity", "1")
-              .attr("r", 3.5)
-              .attr("stroke",function(e) { return color(e.name); })
-              .attr("fill",function(e) { return "#FFFFFF"; })
-              .attr("class",function(d) { return "line-" + d.name.replace(/_/g,"-"); });
-          });
-      });
-    });
+        
+        d3.csv("../data/Events.csv", function(data){
+            var i=0;
+            data.forEach(function(e) {
+                  
+                user.append("circle")              
+                    .datum(function(d){ return { name: d.name, value: d.values[check(d,e.EventWeek1)] }; })
+                    .attr("transform", function(d){ 
+                        return "translate(" + x(e.EventWeek1) + "," + y(d.value.engagement) + ")"; })
+                    .attr("r", 0)
+                    .style("opacity", "0")
+                    .transition().duration(600).delay(50).ease('elastic')
+                    .style("opacity", "1")
+                    .attr("r", 3.5)
+                    .attr("stroke",function(e) { return color(e.name); })
+                    .attr("fill",function(e) { return "#FFFFFF"; })
+                    .attr("class",function(d) { return "line-" + d.name.replace(/_/g,"-"); });
+            
+                for(var j=0; j<colors.length; j++){
+                    
+                    var c  = user[0][j].childNodes[i+2];
+                    var cp = user[0][j];
+                    
+                    c.eventkey = String.fromCharCode(65+i);
+
+                    d3.select(c).on("mouseover", function(){
+                        tooltip.style("visibility", "visible")
+                        .style("top",  function(cy){ return d3.event.pageY - 50 +"px";})
+                        .style("left", function(cx){ return d3.event.pageX - (tooltip[0][0].clientWidth/2) +"px";})
+                        d3.select('.tool-label').text(function(){ return c.eventkey;});
+                        d3.select(".pointer-box.down").style("left",  String( 
+                            ( $(".tooltip-0").width() - $(".pointer-box.down").width() - 8) /2 
+                        )  + "px");
+                        return tooltip;
+                    })
+
+                    .on("mousemove", function(){})
+                    
+                    .on("mouseout", function(d,cx,cy){
+                        /*if( d3.event.pageY > cy-20 && d3.event.pageX > cx-20)*/ 
+                            /* return tooltip.style("visibility", "hidden"); */
+                    });
+                    
+                    /* d3.select(c).attr("title",function(){ return String.fromCharCode(65+i);} ); */
+                    
+/*
+                    d3.select(cp)
+                    .append("text")
+                    .attr("class", "text")
+                    .attr("transform", function(d){ 
+                        return "translate(" + 
+                            x(Number(e.EventWeek1)) + "," + 
+                            y(d3.max(users, function(c){ 
+                                return d3.max(c.values, function(v){ 
+                                    return v.engagement; })*1.03; })) + ")"; })
+            
+                    .attr("dy", ".71em")
+                    .text(function(){ return String.fromCharCode(65+i);});   
+*/                    
+                }
+                i++;  
+            });
+        });
+     });
 }
 
 function check(arr, val){
@@ -313,6 +380,8 @@ function ToggleGraph(elem, line, index){
     }
 }
 
+	
+	
 function ToggleEvent(label, id){
 function highlight( content, evnt ){}
 function downlight( content, evnt ){}    

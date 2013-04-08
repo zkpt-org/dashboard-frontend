@@ -6,13 +6,13 @@
     </div>
     <div class="hide" style="display:block;">
         <!-- <h3>User Engagement Today</h3> -->
-        <div id="big-dial">Pedometer</div>
+        <div id="big-dial" title="Percentage of users with 5 or more days of activity.">Pedometer</div>
         <table>
             <tr>
-                <td>Logins</td>
-                <td>Questions</td>
-                <td>Weekend Logins</td>
-                <td>Self Tracking</td>
+                <td title="Percentage of users with 4 or more days on which they logged in.">Logins</td>
+                <td title="Percentage of users who answered 3 or more coach questions.">Questions</td>
+                <td title="Percentage of users with weekend login activity.">Weekend Logins</td>
+                <td title="Percentage of users who reported on the self tracker.">Self Tracking</td>
             </tr>
         </table>
         
