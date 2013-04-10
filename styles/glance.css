@@ -85,25 +85,41 @@
 }
 
 #dial-panel table{
-    width:605px;
-    color: #999;
+    width:580px;
+    color: #888;
     margin-bottom:-8px;
-    margin-left:170px;
-    position: relative;
+    margin-left:175px;
+}
+
+#dial-panel table tr{
+    width: 100%;
+    white-space: nowrap;
 }
 
 #dial-panel table td{
     width:145px;
     text-align: center;
-    text-shadow: 1px 2px #fff, 0px -1px #ddd;
+    text-shadow: 1px 1px #fff, 0px -1px #ddd;
 }
 
 #dial-panel #big-dial{
     width:150px;
-    color: #999;
+    color: #888;
     text-align: center;
-    text-shadow: 1px 2px #fff, 0px -1px #ddd;
+    text-shadow: 1px 1px #fff, 0px -1px #ddd;
 }
+#dial-panel #labels td{
+    display:inline-block;
+    width:150px;    
+}
+
+/*
+#dial-panel #labels #d1{text-indent:6px;}
+#dial-panel #labels #d2{text-indent:18px;}
+#dial-panel #labels #d3{text-indent: 24px;}
+#dial-panel #labels #d4{text-indent: 32px;}
+*/
+
 
 #power-gauge-0, #power-gauge-1, #power-gauge-2, #power-gauge-3, #power-gauge-4{
     display: table-cell;
@@ -144,8 +160,7 @@
 #counter-0, #counter-1, #counter-2, #counter-3, #counter-4{
     color:#777;
     font-size: small;
-    font-weight: normal;
-    
+    font-weight: normal;  
 }
 
 #counter-0{

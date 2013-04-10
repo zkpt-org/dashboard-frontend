@@ -109,7 +109,9 @@ nav .dropdown{
     padding:0px;
     margin:0px;
 }
-
+#filters .btn-group{
+    margin-right:2px;
+}
 #filter-controls .btn-group button{
     width:125px;
     font-size: small;
@@ -119,16 +121,37 @@ nav .dropdown{
     white-space:nowrap;
     text-indent: 7px;
 }
+#filters .btn-group button{
+    width:100px;
+    font-size: small;
+    text-align:left;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-indent: 7px;
+    height:30px;
+    border-style: none;
+    border-bottom:1px solid #ddd;
+}
 
-#filter-controls .btn-group .caret{
+#filter-controls .btn-group .caret, 
+#filters .btn-group .caret{
     margin-left:0px;
 }
-#filter-controls .btn-group .dropdown-toggle{
+#filter-controls .btn-group .dropdown-toggle,
+#filters .btn-group .dropdown-toggle{
     width:25px;
     padding:0px;
     margin:0px;
     height:30px;
 }
+#filters .btn-group .dropdown-toggle{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+
 
 .pointer-box .pointer{
     border:1px solid #ddd;

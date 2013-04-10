@@ -1,0 +1,121 @@
+.tabbed-box{
+    padding-top:30px;
+    padding-bottom: 50px;
+}
+#intervention-builder #filters{
+    margin-left:20px;
+}
+#intervention-builder .nav{
+    margin-left:10px;
+    margin-top:10px;
+}
+#intervention-builder table{
+    width:720px;
+    margin:10px 20px;
+    margin-top:0px;
+    text-align:left;
+    position:relative;
+    padding: 0px;
+}
+/*
+#intervention-builder div{
+    display:table-cell;
+    margin:20px 10px;
+}
+*/
+#intervention-builder td label{
+    font-size: small;
+    color: #bbb;
+}
+
+#parameters{
+    height:150px;
+}
+
+#currency-box{width:104px;}
+#currency-box .k-textbox,
+#currency-box .k-widget,
+#currency-box .k-autocomplete, 
+#currency-box .k-dropdown-wrap, 
+#currency-box .k-picker-wrap, 
+#currency-box .k-numeric-wrap{
+    width:80px;
+}
+#days-box{width:94px;}
+#days-box .k-textbox,
+#days-box .k-widget, 
+#days-box .k-autocomplete, 
+#days-box .k-dropdown-wrap, 
+#days-box .k-picker-wrap, 
+#days-box .k-numeric-wrap{
+    width:70px;
+}
+#steps-box{width:134px;}
+#steps-box .k-textbox,
+#steps-box .k-widget, 
+#steps-box .k-autocomplete, 
+#steps-box .k-dropdown-wrap, 
+#steps-box .k-picker-wrap, 
+#steps-box .k-numeric-wrap{
+    width:110px;
+}
+#kudos-box{width:114px;}
+#kudos-box .k-textbox,
+#kudos-box .k-widget, 
+#kudos-box .k-autocomplete, 
+#kudos-box .k-dropdown-wrap, 
+#kudos-box .k-picker-wrap, 
+#kudos-box .k-numeric-wrap{
+    width:90px;
+}
+
+k-textbox > input, .k-autocomplete .k-input, .k-picker-wrap .k-input, .k-numeric-wrap .k-input, .k-dropdown-wrap .k-input, .k-selectbox .k-input {
+    border: 0 none;
+    height: 1.5em;
+}
+
+
+#result-box{
+    width:120px;
+    min-height:120px;
+}
+#result.circle{
+    background-color: #3ca3da;
+    border:2px solid #2688bc;
+    font-weight:bold;
+    color:#fff;
+    font-size: xx-large;
+    vertical-align: middle;
+    text-align: center;
+    margin:auto;
+    padding:0;
+}
+.operators{
+    font-size: xx-large;
+    color: #3ca3da;
+    text-align:center;
+    vertical-align: center;
+    position:relative;
+    padding:0px 0px;
+    font-weight:bold;
+    padding-top:25px;
+}
+#lift-box{
+    display:table;
+    width:100%;
+    height:100%;
+    text-align: center;    
+}
+#lift{
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#lift-label{
+    color: #3ca3da;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align:center;
+    padding-top:10px;
+    width:120px;
+}

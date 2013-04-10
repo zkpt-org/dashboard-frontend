@@ -15,7 +15,7 @@
 	
 	<script type="text/javascript" src="../js/gauge-white.js"></script>
 	<script type="text/javascript" src="../js/glance.js"></script>
-		
+
 	<link type="text/css" rel="stylesheet" href="../styles/bootstrap/css/bootstrap.min.css"/>
 	<link type="text/css" rel="stylesheet" href="../styles/Font-Awesome/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="../styles/reset.css"/>

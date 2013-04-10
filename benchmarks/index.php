@@ -34,7 +34,6 @@
     </header>
     <div id=container>
         <? include('../shared/filters.php'); ?>
-        <img src="1.png" />
     </div>
     <footer></footer>
 </body>

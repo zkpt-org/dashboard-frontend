@@ -15,6 +15,7 @@ var dial_values = [90.015,86.72,78,63.05,69.63166667].reverse();
 /*~~~~~ On Ready State ~~~~~~*/
 
 function onDocumentReady() {
+    
     var gauges = {}
     for( var i=0; i<5; i++ ){
             gauges["g" + String(i)] = gauge("#gauge-" + String(i), {
@@ -75,8 +76,7 @@ function onDocumentReady() {
 	   )  + "px")
 	.append("div")
 	.attr("class", "pointer small").style("left", "0px");
-
-
+		
 	updateReadings();
     draw();
     

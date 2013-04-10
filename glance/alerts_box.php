@@ -23,7 +23,6 @@
     </div>
 
     <div class="alert alert-success">
-        <button type="button" class="close" onclick="ToggleAlertsBox();">&times;</button>
         <i class="icon-ok"></i>
         <strong>70% of users from Program B are now in the green zone.</strong>
     </div>  

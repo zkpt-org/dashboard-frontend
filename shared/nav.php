@@ -6,14 +6,12 @@
     <li <? echo $page=="intervention" ? "class=selected " : " "; ?>><a href="../intervention">Intervention Builder</a></li>
     <li <? echo $page=="benchmark"    ? "class=selected " : " "; ?>><a href="../benchmarks">Benchmarks</a></li>
     <li class="dropdown">
-        <a class="dropdown-toggle"
-       data-toggle="dropdown"
-       href="#">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
         <i class="webfont">U </i>
         Ramesh Kumar
         <b class="caret"></b>
       </a>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu dropdown-menu-arrow">
       <li><a><i class=icon-dashboard></i> Account</a></li>
       <li><a><i class=icon-wrench></i> Settings</a></li>
       <li><a><i class=icon-question-sign></i> Help</a></li>

@@ -58,28 +58,28 @@
     </div>
     <div id="graph-key">
         <ul>
-            <li title="Used on 5 or more days">
+            <li data-toggle="tooltip" title="Used on five or more days">
                 <a href="javascript:;" onclick="ToggleGraph(this, 'Pedometer', 0);">
                     <div class="key-circle pedometer"></div>Pedometer<i class="icon-ok"></i>
                 </a>
             </li>            
-            <li  title="Logged in on 4 or more days">
+            <li data-toggle="tooltip" title="Logged in on four or more days">
                 <a href="javascript:;" onclick="ToggleGraph(this, 'Logins', 1);">
                     <div class="key-circle login"></div>Logins<i class="icon-ok"></i>
                 </a>
             </li>
             
-            <li title="Answered 3 or more coach questions">
+            <li data-toggle="tooltip" title="Answered three or more coach questions">
                 <a href="javascript:;" onclick="ToggleGraph(this, 'Questions', 2);"> 
                     <div class="key-circle question"></div>Questions<i class="icon-ok"></i>
                 </a>
             </li>
-            <li title="Logged in over the weekend">
+            <li data-toggle="tooltip" title="Logged in over the weekend">
                 <a href="javascript:;" onclick="ToggleGraph(this, 'Weekend-Logins', 3);">
                     <div class="key-circle weekend"></div>Weekend Logins<i class="icon-ok"></i>
                 </a>
             </li>            
-            <li title="Users who reported on self tracker">
+            <li data-toggle="tooltip" title="Users who reported on self tracker">
                 <a href="javascript:;" onclick="ToggleGraph(this, 'Self-Trackers', 4);">
                     <div class="key-circle tracker"></div>Self Trackers<i class="icon-ok"></i>
                 </a>
