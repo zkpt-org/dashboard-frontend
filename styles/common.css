@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
+/* @import url(http://fonts.googleapis.com/css?family=Pacifico); */
 
 html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, p, blockquote, button{
 margin:0;
@@ -161,21 +161,38 @@ nav li.selected{
 }
 
 .tabbed-box{
-    width:760px;
+    /* width:760px; */
     padding-top:20px;
 	/* margin-top:10px; */
 	border-radius: 5px;	
 	border:1px solid #ddd;
-	border-top-style:none;
+	
+/*
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
+*/
 	background-color: #fff;
 }
 
 .nav.nav-tabs.tab-box{
-    margin-bottom: 0px;
+    margin-bottom: -1px;
+    width:736px;
+    border-bottom-style:solid 1px #fff;
 }
 
+.nav-tabs:first-child{
+    margin-left:20px;
+}
+
+.nav-tabs li a{
+    line-height:16px;
+}
+.nav-tabs li a i{
+    font-size:medium;
+}
+.nav-tabs li.active a i{
+    color:#999;
+}
 
 .circle{
     border-radius:50%;
@@ -275,7 +292,18 @@ nav li.selected{
     border-top-color: #2688bc;/*  #3ca3da; */
     background: none;
 }
-
+.tooltip.right .tooltip-arrow{
+     border-right-color: #2688bc;
+     background: none;
+}
+.tooltip.left .tooltip-arrow{
+     border-left-color: #2688bc;
+     background: none;
+}
+.tooltip.bottom .tooltip-arrow{
+     border-bottom-color: #2688bc;
+     background: none;
+}
 
 .tooltip-0{
     position: absolute;

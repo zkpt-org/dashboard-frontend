@@ -10,11 +10,9 @@ function onready() {
     );});
 
     $(function () {
-/*
         $('body').popover({
             selector: '[data-toggle="popover"]'
-        }).click(function(e) {e.preventDefault();});
-*/
+        });
 
 /*
         $('body').tooltip({
@@ -22,6 +20,15 @@ function onready() {
             selector: 'a[rel="tooltip"], [data-toggle="tooltip"]'
         });
 */
+    });
+    
+    $('.nav.nav-tabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    
+    $('ul.nav.nav-pills li a').click(function() {			
+        $(this).parent().addClass('active').siblings().removeClass('active');			
     });
 }
 
