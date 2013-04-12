@@ -13,7 +13,9 @@
 	<script type="text/javascript" src="../styles/bootstrap/js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript" src="../js/shared.js"></script>
+	<script type="text/javascript" src="../js/bullet.js"></script>
 	<script type="text/javascript" src="../js/benchmarks.js"></script>
+	
 		
 	<link type="text/css" rel="stylesheet" href="../styles/bootstrap/css/bootstrap.min.css"/>
 	<link type="text/css" rel="stylesheet" href="../styles/Font-Awesome/css/font-awesome.min.css">
@@ -34,7 +36,46 @@
     </header>
     <div id=container>
         <? include('../shared/filters.php'); ?>
+        <!-- <button class="btn btn-zp">Update</button> -->
+        <div id="graph-1">
+            <div class="show-hide-toggle">
+                <a href="javascript:;" onclick="fold('#graph-1');">
+                <i class=icon-caret-down></i></a>
+                <hr/>
+            </div>
+            <div class="hide">
+                <h3>Engagement</h3>
+                <div id="engagement" class="box"></div>
+            </div>
+        </div>
+        
+        <div id="graph-2">
+            <div class="show-hide-toggle">
+                <a href="javascript:;" onclick="fold('#graph-2');">
+                <i class=icon-caret-down></i></a>
+                <hr/>
+            </div>
+            <div class="hide">
+                <h3>Activity</h3>
+                <div id="activity" class="box"></div>
+            </div>
+        </div>
+        
+        <div id="graph-3">
+            <div class="show-hide-toggle">
+                <a href="javascript:;" onclick="fold('#graph-3');">
+                <i class=icon-caret-down></i></a>
+                <hr/>
+            </div>
+            <div class="hide">
+                <h3>Outcomes</h3>
+                <div id="outcomes" class="box"></div>
+            </div>
+        </div>
+        
+            
     </div>
+        
     <footer></footer>
 </body>
 
